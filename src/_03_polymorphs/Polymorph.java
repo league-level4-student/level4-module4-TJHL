@@ -10,13 +10,6 @@ public abstract class Polymorph {
    	 this.x = x;
    	 this.y = y;
     }
-    
-    public void update(){
-   	 
-    }
-    
-    public abstract void draw(Graphics g);
-    
     public int getX() {
     	return x;
     }
@@ -30,4 +23,11 @@ public abstract class Polymorph {
     public void setY(int newY) {
     	y = newY;
     }
+    public void update(){
+   	 
+    }
+    
+    public abstract void draw(Graphics g);
+    
+    
 }
