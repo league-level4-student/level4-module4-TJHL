@@ -21,8 +21,8 @@ public class MouseMorph extends Polymorph implements MouseMotionListener {
 	public void draw(Graphics g) {
 		g.setColor(Color.black);
 		g.fillRect(getX(), getY(), width, height);
-		setX(mouseX);
-		setY(mouseY);
+		setX(mouseX-25);
+		setY(mouseY-50);
 
 	}
 	
@@ -40,15 +40,12 @@ public class MouseMorph extends Polymorph implements MouseMotionListener {
 	}
 
 	@Override
-	public void mouseDragged(MouseEvent e) {
-		
-	}
+	public void mouseDragged(MouseEvent e) {}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
 		mouseX = e.getX();
 		mouseY = e.getY();
-		System.out.println(mouseX);
 	}
 
 }
