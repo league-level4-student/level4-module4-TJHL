@@ -16,7 +16,7 @@ import junit.framework.TestCase;
  */
 
 public class HospitalTest extends TestCase {
-
+	//NOTHING DOES ANYTHING YET
 	Hospital testHospital = new Hospital();
 
 	public void testAddDoctor() {
