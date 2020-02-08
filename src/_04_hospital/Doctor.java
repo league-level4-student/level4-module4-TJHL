@@ -1,5 +1,34 @@
 package _04_hospital;
 
-public class Doctor {
+import java.util.ArrayList;
 
+public class Doctor {
+	
+	boolean isSurgeon = false;
+	boolean isGP = false;
+	
+	private ArrayList<Patient> docsPatients = new ArrayList<Patient>();
+	
+	public void assignPatient(Patient corpse) {
+		docsPatients.add(corpse);
+	}
+	
+	public ArrayList<Patient> getPatients(){
+		return docsPatients;
+	}
+	
+	public void doMedicine() {
+		for (int i = 0; i < docsPatients.size(); i++) {
+			docsPatients.get(i).checkPulse();
+		}
+	}
+
+	public boolean performsSurgery() {
+		return isSurgeon;
+	}
+	
+	public boolean makesHouseCalls() {
+		return isGP;
+	}
+	
 }

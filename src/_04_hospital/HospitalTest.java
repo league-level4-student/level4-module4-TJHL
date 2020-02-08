@@ -16,7 +16,6 @@ import junit.framework.TestCase;
  */
 
 public class HospitalTest extends TestCase {
-	//NOTHING DOES ANYTHING YET
 	Hospital testHospital = new Hospital();
 
 	public void testAddDoctor() {
@@ -32,8 +31,7 @@ public class HospitalTest extends TestCase {
 		testHospital.addPatient(new Patient());
 		assertEquals(3, testHospital.getPatients().size());
 	}
-
-	/* Fix asserts one at a time */
+	
 	public void testDoctorsHaveSpecialties() throws Exception {
 		Doctor testDoctor = new Doctor();
 		assertEquals(false, testDoctor.performsSurgery());
@@ -78,6 +76,7 @@ public class HospitalTest extends TestCase {
 		testDoctor.doMedicine();
 		assertEquals(true, max.feelsCaredFor());
 		assertEquals(true, macky.feelsCaredFor());
+		
 	}
 
 	/* test calling assignPatient when doctor is full throws exception */
