@@ -9,8 +9,13 @@ public class Doctor {
 	
 	private ArrayList<Patient> docsPatients = new ArrayList<Patient>();
 	
-	public void assignPatient(Patient corpse) {
-		docsPatients.add(corpse);
+	public void assignPatient(Patient corpse) throws DoctorFullException {
+		if(docsPatients.size()>2) {
+			throw new DoctorFullException();
+		}
+		else {
+			docsPatients.add(corpse);
+		}
 	}
 	
 	public ArrayList<Patient> getPatients(){

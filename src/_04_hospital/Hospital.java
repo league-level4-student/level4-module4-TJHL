@@ -24,6 +24,15 @@ public class Hospital {
 	}
 	
 	public void assignPatientsToDoctors() {
-		
+		int docCount = 0;
+		for (int i = 0; i < gib.size(); i++) {
+			try {
+				doc.get(docCount).assignPatient(gib.get(i));
+			}catch (DoctorFullException e) {
+				docCount++;
+				i--;
+			}
+
+		}
 	}
 }
